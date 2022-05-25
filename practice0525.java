@@ -2,18 +2,26 @@ public class practice0525
 {
 	public static void main(String args[])
 	{
-		int score[]={9,14,6,18,2,10};
-		largest(score);
+		int A[][]={{18,32,65,27,30},{17,56,12,66}};
+		int B[][];
+		B=add10(A);
+		for(int i=0;i<B.length;i++)
+		{
+			for(int j=0;j<B[i].length;j++)
+				System.out.print(B[i][j]+" ");
+			System.out.println();
+		}
 	}
 	
-	public static void largest(int arr[])
+	public static int[][] add10(int arr[][])
 	{
-		int max=arr[0];
 		for(int i=0;i<arr.length;i++)
 		{
-			if(max<arr[i])
-				max=arr[i];
+			for(int j=0;j<arr[i].length;j++)
+			{
+				arr[i][j]+=10;
+			}
 		}
-		System.out.println("largest num="+max);
+		return arr;
 	}
 }
